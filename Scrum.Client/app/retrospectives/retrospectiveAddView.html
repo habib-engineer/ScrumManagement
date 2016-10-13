@@ -1,0 +1,88 @@
+﻿
+<form class="form-horizontal" name="retrospectiveForm"
+      novalidate>
+    <fieldset>
+        <legend>Retrospective Information</legend>
+        <div class="form-group"
+             ng-class="{'has-error':retrospectiveForm.inputretrospectiveName.$invalid &&
+             retrospectiveForm.inputretrospectiveName.$dirty}">
+            <label class="col-md-2 control-label" for="inputretrospectiveName">Retrospective Name</label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputretrospectiveName"
+                       type="text"
+                       placeholder="Retrospective Name (required)"
+                       ng-model="vm.retrospective.name"
+                       required
+                       ng-minlength="4"
+                       ng-maxlength="100" />
+            </div>
+            <span class="help-block has-error">
+                <span ng-show="retrospectiveForm.inputretrospectiveName.$error.required">
+                    Retrospective name is required
+                </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="inputretrospectiveSummary">Retrospective Summary</label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputretrospectiveSummary"
+                       type="text"
+                       placeholder="Retrospective Summary"
+                       ng-model="vm.retrospective.summary" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="inputretrospectiveDate">Retrospective Date</label>
+            <div class="col-md-4">
+                <input type="date" class="form-control" ng-model="vm.retrospective.date" />
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error':retrospectiveForm.inputretrospectiveParticipants.$invalid &&
+             retrospectiveForm.inputretrospectiveParticipants.$dirty}">
+            <label class="col-md-2 control-label" for="inputretrospectiveParticipants">Participants</label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputretrospectiveParticipants"
+                       type="text"
+                       placeholder="Retrospective Participants (required)"
+                       ng-model="vm.retrospective.participants"
+                       required
+                       ng-minlength="4"
+                       />
+            </div>
+            <span class="help-block has-error">
+                <span ng-show="retrospectiveForm.inputretrospectiveParticipants.$error.required">
+                    At least one participants is required
+                </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn btn-primary"
+                            style="width:80px;margin-right:10px"
+                            ng-click="vm.submit()"
+                            ng-disabled="retrospectiveForm.$invalid">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button type="button" class="btn btn-default"
+                            style="width:70px"
+                            ng-click="vm.cancel(retrospectiveForm)">
+                        Cancel
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group" ng-show="vm.message">
+            <div class="col-md-6">
+                <pre style="font: inherit">{{vm.message }}</pre>
+            </div>
+        </div>
+    </fieldset>
+</form>

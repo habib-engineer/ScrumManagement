@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Scrum Management</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app="scrumManagement">
+
+    <nav class="nav navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand"
+               ui-sref="home">Scrum Management</a>
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="retrospectivesList" class="glyphicon glyphicon-list"> Retrospective List</a></li>
+                    <li><a ui-sref="retrospectiveAdd"><i class="glyphicon glyphicon-plus"></i> Add Retrospective</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br/>
+    <br/>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+    
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <!-- Angular Liberaries --> 
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    
+    
+
+    <!-- Retrospective Controllers -->
+    <script src="app/app.js"></script>
+    <script src="app/retrospectives/retrospectivesListCtrl.js"></script>
+    <script src="app/retrospectives/retrospectiveAddCtrl.js"></script>
+
+    <!-- Feedback Controllers -->
+    <script src="app/feedbacks/feedbacksListCtrl.js"></script>
+    <script src="app/feedbacks/feedbackAddCtrl.js"></script>
+
+    <!-- Services -->
+    <script src="common/common.services.js"></script>
+    <script src="common/retrospectivesResource.js"></script>
+    <script src="common/feedbacksResource.js"></script>
+
+
+</body>
+</html>

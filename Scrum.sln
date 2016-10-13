@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrum.WebApi", "Scrum.WebApi\Scrum.WebApi.csproj", "{90C5A03B-B55C-477D-A1FB-2AB25D5EF082}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Scrum.Client", "http://localhost:13778", "{1A819A03-4CF9-49E0-91C9-8AA14F4D0537}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_13778"
+		Debug.AspNetCompiler.PhysicalPath = "Scrum.Client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13778\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_13778"
+		Release.AspNetCompiler.PhysicalPath = "Scrum.Client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13778\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Scrum.Client\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrum.WebApi.UnitTests", "Scrum.WebApi.UnitTests\Scrum.WebApi.UnitTests.csproj", "{8312C880-4427-4CDB-8B68-2DA2337C0E95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90C5A03B-B55C-477D-A1FB-2AB25D5EF082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C5A03B-B55C-477D-A1FB-2AB25D5EF082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C5A03B-B55C-477D-A1FB-2AB25D5EF082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C5A03B-B55C-477D-A1FB-2AB25D5EF082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A819A03-4CF9-49E0-91C9-8AA14F4D0537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A819A03-4CF9-49E0-91C9-8AA14F4D0537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A819A03-4CF9-49E0-91C9-8AA14F4D0537}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A819A03-4CF9-49E0-91C9-8AA14F4D0537}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8312C880-4427-4CDB-8B68-2DA2337C0E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8312C880-4427-4CDB-8B68-2DA2337C0E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8312C880-4427-4CDB-8B68-2DA2337C0E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8312C880-4427-4CDB-8B68-2DA2337C0E95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

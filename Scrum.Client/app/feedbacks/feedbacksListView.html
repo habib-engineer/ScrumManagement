@@ -1,0 +1,26 @@
+﻿<div class="panel panel-primary">
+<div class="panel-heading" style="font-size:large">
+    Feedbacks List
+</div>
+    <div class="panel-body">
+        <button type="button" ng-click="vm.addFeedback()" class="btn btn-primary glyphicon glyphicon-plus"> Feedback</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Retrospective Name</th>
+                    <th>Person Name</th>
+                    <th>Body</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="feedback in vm.feedbacks">
+                    <td>{{feedback.retrospectiveName}}</td>
+                    <td>{{feedback.personName}}</td>
+                    <td>{{feedback.body}}</td>
+                    <td>{{feedback.type}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

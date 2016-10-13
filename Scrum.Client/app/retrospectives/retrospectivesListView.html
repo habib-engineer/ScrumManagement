@@ -1,0 +1,37 @@
+﻿<div class="panel panel-primary">
+<div class="panel-heading" style="font-size:large">
+    Retrospectives List
+</div>
+<div class="panel-body">
+    <table>
+        <tr>
+            <td>
+                <input type="date" id="retrospectiveSearchDate" ng-model="vm.searchdate" value="{{vm.searchdate}}" />
+            </td>
+            <td>
+                <button ng-click="vm.searchbydate()" class="btn btn-primary glyphicon glyphicon-search"> Search</button>
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Summary</th>                
+                <th>Date</th>
+                <th>Participants</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="retrospective in vm.retrospectives">
+                <td>{{retrospective.name}}</td>
+                <td>{{retrospective.summary}}</td>
+                <td>{{retrospective.date | date}}</td>
+                <td>{{retrospective.participants}}</td>
+                
+                <td><button type="button" ng-click="vm.viewFeedbacks()" class="btn btn-primary glyphicon glyphicon-list"> Feedbacks</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

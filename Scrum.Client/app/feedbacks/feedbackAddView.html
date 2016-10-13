@@ -1,0 +1,84 @@
+﻿
+<form class="form-horizontal" name="feedbackForm"
+      novalidate
+      ng-controller="FeedbackAddCtrl as vm">
+    <fieldset>
+        <legend>Feedback Information</legend>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="retrospectiveName">Retrospective Name</label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="retrospectiveName"
+                       type="text"
+                       ng-model="vm.feedback.retrospectivename"
+                       />
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error':feedbackForm.inputPersonName.$invalid &&
+             feedbackForm.inputPersonName.$dirty}">
+            <label class="col-md-2 control-label" for="inputPersonName">Person Name</label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputPersonName"
+                       type="text"
+                       placeholder="Person Name (required)"
+                       ng-model="vm.feedback.personname"
+                       required
+                       ng-minlength="4"
+                       ng-maxlength="100" />
+            </div>
+            <span class="help-block has-error">
+                <span ng-show="feedbackForm.inputPersonName.$error.required">
+                    Feedback person name is required
+                </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="inputfeedbackBody">Feedback Body</label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputfeedbackBody"
+                       type="text"
+                       placeholder="Feedback Body"
+                       ng-model="vm.feedback.body" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="inputfeedbackType">Feedback Type</label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputfeedbackType"
+                       type="text"
+                       placeholder="Feedback Type"
+                       ng-model="vm.feedback.type"
+                      />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn btn-primary"
+                            style="width:80px;margin-right:10px"
+                            ng-click="vm.submit()"
+                            ng-disabled="feedbackForm.$invalid">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button type="button" class="btn btn-default"
+                            style="width:70px"
+                            ng-click="vm.cancel(feedbackForm)">
+                        Cancel
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group" ng-show="vm.message">
+            <div class="col-md-6">
+                <pre style="font: inherit">{{vm.message }}</pre>
+            </div>
+        </div>
+    </fieldset>
+</form>
